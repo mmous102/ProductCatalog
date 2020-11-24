@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listViewProducts;
 
     List<Product> products;
-
+    FirebaseDatabase database= FirebaseDatabase.getInstance();
     DatabaseReference databaseProducts;
 
     @Override
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(), databaseError.toString(), Toast.LENGTH_LONG).show();
 
             }
         });

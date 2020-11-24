@@ -26,6 +26,7 @@ import static org.hamcrest.CoreMatchers.anything;
 
         private String mStringToBetyped;
         private String mNumberToBetyped;
+
         @Rule
         public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(
                 MainActivity.class);
